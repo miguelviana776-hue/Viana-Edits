@@ -4,7 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Viana Edits - Curso de Edição</title>
+
   <style>
+    @font-face {
+      font-family: 'Steel';
+      src: url('steel-steel-700.ttf') format('truetype');
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -19,7 +25,7 @@
 
     header {
       background: #020617;
-      padding: 15px 30px;
+      padding: 20px 30px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -27,8 +33,12 @@
     }
 
     header h1 {
-      color: #38bdf8;
-      margin-bottom: 10px;
+      font-family: 'Steel', Arial, sans-serif;
+      font-size: 48px;
+      color: #e03e3e;
+      margin-bottom: 15px;
+      letter-spacing: 2px;
+      text-shadow: 0 0 15px rgba(224, 62, 62, 0.6);
     }
 
     nav {
@@ -37,20 +47,16 @@
       gap: 20px;
     }
 
-    header h1 {
-      color: #38bdf8;
-    }
-
     nav a {
-      margin: 0 10px;
       text-decoration: none;
-      color: #cbd5f5;
+      color: #f87171;
       transition: 0.3s;
       cursor: pointer;
+      font-weight: bold;
     }
 
     nav a:hover {
-      color: #38bdf8;
+      color: #e03e3e;
     }
 
     .container {
@@ -67,38 +73,42 @@
     }
 
     @keyframes fade {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .card {
       background: #020617;
-      padding: 20px;
-      border-radius: 12px;
+      padding: 25px;
+      border-radius: 15px;
       margin-top: 20px;
       box-shadow: 0 0 20px rgba(0,0,0,0.4);
     }
 
     .btn {
-      background: linear-gradient(45deg, #38bdf8, #6366f1, #22c55e);
-      color: black;
-      padding: 12px 25px;
+      font-family: 'Steel', Arial, sans-serif;
+      background-color: #e03e3e;
+      color: white;
+      padding: 14px 28px;
       border: none;
       border-radius: 12px;
       margin-top: 15px;
       cursor: pointer;
-      transition: 0.3s;
-      font-weight: bold;
-      box-shadow: 0 0 15px rgba(56,189,248,0.5);
+      font-size: 18px;
+      box-shadow: 0 0 15px rgba(224,62,62,0.5);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .btn:hover {
       transform: scale(1.05);
-      background: linear-gradient(45deg, #0ea5e9, #4f46e5, #16a34a);
-    }
-
-    .btn:hover {
-      background: #0ea5e9;
+      box-shadow: 0 0 25px rgba(224,62,62,0.7);
+      background-color: #b53030;
     }
 
     footer {
@@ -109,6 +119,11 @@
       font-size: 14px;
       color: #94a3b8;
     }
+
+    .bio p {
+      line-height: 1.6;
+      color: #f87171;
+    }
   </style>
 </head>
 <body>
@@ -117,7 +132,6 @@
   <h1>Viana Edits</h1>
   <nav>
     <a onclick="showSection('home')">Início</a>
-    <a onclick="showSection('curso')">Curso</a>
     <a onclick="showSection('discord')">Discord</a>
     <a onclick="showSection('sobre')">Nos Conheça</a>
   </nav>
@@ -128,19 +142,10 @@
   <div id="home" class="section active">
     <h2>Bem-vindo ao Curso de Edição 🎬</h2>
     <div class="card">
-      <p>Aprenda edição de vídeos do zero ao avançado com aulas práticas.</p>
-      <button class="btn" onclick="showSection('curso')">Começar agora</button>
-    </div>
-  </div>
-
-  <div id="curso" class="section">
-    <h2>Área do Curso</h2>
-    <div class="card">
-      <p>Módulo 1 - Introdução à edição</p>
-      <p>Módulo 2 - Efeitos e cortes</p>
-      <p>Módulo 3 - Transições profissionais</p>
-      <p>Módulo 4 - Edição avançada</p>
-      <button class="btn">Assistir aulas</button>
+      <p>Aprenda edição de vídeos do zero ao avançado com aulas práticas e transições profissionais.</p>
+      <a href="https://pay.cakto.com.br/ss9c9mz_842074" target="_blank">
+        <button class="btn">COMEÇAR AGORA</button>
+      </a>
     </div>
   </div>
 
@@ -148,14 +153,14 @@
     <h2>Comunidade Discord</h2>
     <div class="card">
       <p>Entre na nossa comunidade para tirar dúvidas e evoluir mais rápido!</p>
-      <button class="btn" onclick="window.open('https://discord.gg/JzCmSjJr')">Entrar no Discord</button>
+      <button class="btn" onclick="window.open('https://discord.gg/JzCmSjJr')">ENTRAR NO DISCORD</button>
     </div>
   </div>
 
   <div id="sobre" class="section">
     <h2>Nos Conheça</h2>
-    <div class="card">
-      <p>Somos especialistas em edição de vídeo e criamos esse curso para ajudar você a crescer na internet.</p>
+    <div class="card bio">
+      <p>Olá, eu sou o Viana. Faço edits desde o ano passado e este é o meu primeiro curso que irei lançar, com transições, efeitos e tudo que você precisa para se destacar no mundo da edição de vídeos.</p>
     </div>
   </div>
 
